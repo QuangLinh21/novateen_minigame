@@ -669,3 +669,57 @@ form .form-row{
     font-size: 13px;
     font-weight: 700;
 }
+.box_image_item{
+  width: 30%;
+  margin-bottom: 35px;
+}
+.box_image_item a img{
+  width: 100%;
+  border-radius: 10px;
+  border-radius: 10px;
+}
+.box_info_image p:first-child{
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 0;
+  margin-top: 10px;
+}
+.box_info_image p:last-child{
+  text-align: center;
+  font-size: 16px;
+  color: #489CFF;
+  font-weight: 600;
+  margin-top: 5px;
+  margin-bottom: 0;
+}
+#container_list_image{
+  padding-top: 50px;
+}
+.title_list_img{
+  font-size: 30px;
+  padding: 10px;
+  width: 40%;
+  color:#006CEA ;
+  text-align: center;
+  font-weight: 700;
+  border-bottom: 2px solid #006CEA;
+}
+.conn_form_search{
+  margin-bottom: 50px;
+}
+.form_search_data .in_search_data{
+  border: 2px solid #5f5d5d;
+  border-right: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.form_search_data .btn_search_data{
+  padding: 10px 20px;
+  background: #FF6D6D;
+  color: #fff;
+  border:none;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  
+}

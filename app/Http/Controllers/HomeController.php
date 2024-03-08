@@ -30,6 +30,27 @@ class HomeController extends Controller
 
     //    return view('frontend.page.home.show_image',compact('student'));
     // }
+    function getCurrentPageURL() {
+        $pageURL = 'http';
+        if (!empty($_SERVER['HTTPS'])) {if($_SERVER['HTTPS'] == 'on'){$pageURL .= "s";}}
+        $pageURL .= "://";
+        if ($_SERVER["SERVER_PORT"] != "443") {
+          $pageURL .= $_SERVER["SERVER_NAME"].":".$_SERVER["SERVER_PORT"].$_SERVER["REQUEST_URI"];
+        } else {
+          $pageURL .= $_SERVER["SERVER_NAME"].$_SERVER["REQUEST_URI"];
+        }
+        return $pageURL;
+      }
+      public function index(){
+        $meta_seo = [
+            'title' => 'Hợp tác cùng Novaedu',
+            'keywords' => 'Novaedu, Giáo dục, Hợp tác',
+            'description' => 'Hợp tác cùng Novaedu - Hợp tác cùng Novaedu',
+            'url' => $this->getCurrentPageURL(),
+            'img' => 'https://novaedu.vn/uploads/anh-mac-dinh.jpg'
+        ];
+        return view('frontend.page.home.index',compact('meta_seo'));
+      }
     public function student_store(Request $request){
         $info_student = new StudentModel();
         $imageUrl = '';
